@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="login-card" aria-labelledby="login-heading">
+        <h1 id="login-heading">Sign in</h1>
+        <p class="login-card__intro">
+          Enter your email and password to continue.
+        </p>
+
+        <form id="login-form" class="login-form" novalidate>
+          <div class="form-field">
+            <label class="form-label" for="email">Email</label>
+            <input
+              class="form-input"
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              inputmode="email"
+              spellcheck="false"
+              aria-required="true"
+              aria-invalid="false"
+              aria-describedby="email-error"
+            />
+            <p
+              id="email-error"
+              class="form-error"
+              aria-live="polite"
+              role="alert"
+            ></p>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="password">Password</label>
+            <input
+              class="form-input"
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="current-password"
+              aria-required="true"
+              aria-invalid="false"
+              aria-describedby="password-error"
+            />
+            <p
+              id="password-error"
+              class="form-error"
+              aria-live="polite"
+              role="alert"
+            ></p>
+          </div>
+
+          <button
+            type="submit"
+            id="submit-button"
+            class="submit-button"
+            disabled
+          >
+            Sign in
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <script src="login.js"></script>
+  </body>
+</html>
